@@ -6,7 +6,14 @@
 
 int main() {
   // Área para definição das variáveis para armazenar as propriedades das cidades
-printf("Olá, Dreyka\n");
+char estado; 
+char codigo_da_carta [04];
+char nome_da_cidade [20];
+int populaçao; 
+float area_em_km, pib;
+int pontos_turisticos
+
+
   // Área para entrada de dados
 
   // Área para exibição dos dados da cidade
