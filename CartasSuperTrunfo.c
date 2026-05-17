@@ -6,7 +6,7 @@
 
 int main() {
   // Área para definição das variáveis para armazenar as propriedades das cidades
-char estado; 
+char estado [05]; 
 char codigo_da_carta [04];
 char nome_da_cidade [20];
 int populacao; 
@@ -16,9 +16,10 @@ float densidade_populacional;
 float pib_per_capita;
 float super_poder_carta_1;
 
+
 // Variaveis da carta 2 
 
-char estado2;
+char estado2 [05];
 char codigo_da_carta2 [04];
 char nome_da_cidade2 [20];
 int populacao2; 
@@ -29,10 +30,12 @@ float pib_per_capita_carta2;
 float super_poder_carta_2;
 
 
+
+
   // Área para entrada de dados carta 1
 
 printf ("Digite o estado: \n");
-scanf (" %c", &estado);
+scanf (" %s", &estado);
 
 printf ("Digite o codigo da carta: \n"); 
 scanf ("%s", codigo_da_carta);
@@ -55,7 +58,7 @@ scanf ("%d", &pontos_turisticos);
 // Área para entrada de dados carta 2
 printf ("Agora vamos inserir os dados da segunda carta: \n");
 printf ("Digite o estado: \n");
-scanf (" %c", &estado2);
+scanf (" %s", &estado2);
 
 printf ("Digite o codigo da carta: \n"); 
 scanf ("%s", codigo_da_carta2);
@@ -79,9 +82,9 @@ scanf ("%d", &pontos_turisticos_carta2);
 
   // Área para exibição dos dados da cidade da carta 1
 printf ("Olá, jogador! Segue os dados da sua carta\n");
-  printf ("estado: %c\n", estado);
+  printf ("estado: %s\n", estado);
   printf ("Codigo da carta: %s\n", codigo_da_carta);
-  printf ("Nome da cidade %s\n", nome_da_cidade);
+  printf ("Nome da cidade: %s\n", nome_da_cidade);
   printf ("Populacao: %i\n", populacao );
   printf ("Area em KM2: %f\n", area_em_km2);
   printf ("pib: %f\n", pib);
@@ -96,6 +99,8 @@ printf ("Pib per capita: %.2f\n", pib_per_capita);
 super_poder_carta_1 = (float) (populacao + area_em_km2 + pib + pontos_turisticos + pib_per_capita
 + (1.0 / densidade_populacional));
 
+printf ("Super poder carta 1: %.2f\n", super_poder_carta_1);
+
 
 
 
@@ -106,7 +111,7 @@ super_poder_carta_1 = (float) (populacao + area_em_km2 + pib + pontos_turisticos
   // Área para exibição dos dados da cidade da carta 2
 
 printf ("Olá, jogador! Segue os dados da sua carta numero 2\n");
-  printf ("estado: %c\n", estado2);
+  printf ("estado: %s\n", estado2);
   printf ("Codigo da carta: %s\n", codigo_da_carta2);
   printf ("Nome da cidade %s\n", nome_da_cidade2);
   printf ("Populacao: %i\n", populacao2 );
@@ -122,6 +127,24 @@ printf ("Pib per capita: %.2f\n", pib_per_capita_carta2);
 
 super_poder_carta_2 = (float) (populacao2 + area_em_km2_carta2 + pib2 + pontos_turisticos_carta2 + pib_per_capita_carta2
 + (1.0 / densidade_populacional_carta2));
+
+printf ("Super poder carta 2: %.2f\n", super_poder_carta_2);
+
+
+//Comparar as Cartas: Compare as duas cartas atributo por atributo 
+//(exceto estado, código e nome), incluindo o Super Poder. Lembre-se:
+ //para a densidade populacional, a carta com o menor valor vence; 
+ //para os demais atributos (incluindo Super Poder), a carta com o maior valor vence.
+
+printf("Carta 1 venceu em populacao: %d\n",populacao > populacao2);
+printf ("Carta 1 venceu em Area em KM2: %d\n", area_em_km2 > area_em_km2_carta2);
+printf ("Carta 1 venceu em PIB: %d\n", pib > pib2);
+printf ("Carta 1 venceu em Pontos turisticos: %d\n", pontos_turisticos > pontos_turisticos_carta2);
+printf ("Carta 1 venceu em densidade_populacional: %d\n", densidade_populacional < densidade_populacional_carta2);
+printf ("Carta 1 venceu em PIB per capita: %d\n", pib_per_capita > pib_per_capita_carta2);
+printf ("Carta 1 venceu em superpoder: %d\n", super_poder_carta_1 > super_poder_carta_2);
+
+
 
 return 0;
 } 
