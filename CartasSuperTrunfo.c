@@ -52,7 +52,7 @@ printf ("informe a quantidade de pontos turisticos na cidade: \n");
 scanf ("%d", &pontos_turisticos);
 
 // Área para entrada de dados carta 2
-
+printf ("Agora vamos inserir os dados da segunda carta: \n");
 printf ("Digite o estado: \n");
 scanf (" %c", &estado2);
 
@@ -93,21 +93,21 @@ pib_per_capita = pib / populacao;
 printf ("Pib per capita: %.2f\n", pib_per_capita);
 
   // Área para exibição dos dados da cidade da carta 2
-  
-printf ("Olá, jogador! Segue os dados da sua carta\n");
-  printf ("estado: %c\n", estado);
-  printf ("Codigo da carta: %s\n", codigo_da_carta);
-  printf ("Nome da cidade %s\n", nome_da_cidade);
-  printf ("Populacao: %i\n", populacao );
-  printf ("Area em KM2: %f\n", area_em_km2);
-  printf ("pib: %f\n", pib);
-  printf ("Pontos turisticos: %i\n", pontos_turisticos);
 
-densidade_populacional= populacao / area_em_km2;
-printf ("Densidade: %.2f\n", densidade_populacional);
+printf ("Olá, jogador! Segue os dados da sua carta numero 2\n");
+  printf ("estado: %c\n", estado2);
+  printf ("Codigo da carta: %s\n", codigo_da_carta2);
+  printf ("Nome da cidade %s\n", nome_da_cidade2);
+  printf ("Populacao: %i\n", populacao2 );
+  printf ("Area em KM2: %f\n", area_em_km2_carta2);
+  printf ("pib: %f\n", pib2);
+  printf ("Pontos turisticos: %i\n", pontos_turisticos_carta2);
 
-pib_per_capita = pib / populacao;
-printf ("Pib per capita: %.2f\n", pib_per_capita);
+densidade_populacional_carta2= populacao2 / area_em_km2_carta2;
+printf ("Densidade: %.2f\n", densidade_populacional_carta2);
+
+pib_per_capita_carta2 = pib2 / populacao2;
+printf ("Pib per capita: %.2f\n", pib_per_capita_carta2);
 
 return 0;
 } 
