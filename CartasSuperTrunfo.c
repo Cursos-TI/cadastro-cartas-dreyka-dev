@@ -14,10 +14,11 @@ float area_em_km2, pib;
 int pontos_turisticos;
 float densidade_populacional;
 float pib_per_capita;
+float super_poder_carta_1;
 
 // Variaveis da carta 2 
 
-char estado2; 
+char estado2;
 char codigo_da_carta2 [04];
 char nome_da_cidade2 [20];
 int populacao2; 
@@ -25,7 +26,7 @@ float area_em_km2_carta2, pib2;
 int pontos_turisticos_carta2;
 float densidade_populacional_carta2;
 float pib_per_capita_carta2;
-
+float super_poder_carta_2;
 
 
   // Área para entrada de dados carta 1
@@ -92,6 +93,16 @@ printf ("Densidade: %.2f\n", densidade_populacional);
 pib_per_capita = pib / populacao;
 printf ("Pib per capita: %.2f\n", pib_per_capita);
 
+super_poder_carta_1 = (float) (populacao + area_em_km2 + pib + pontos_turisticos + pib_per_capita
++ (1.0 / densidade_populacional));
+
+
+
+
+//(população, área, PIB, número de pontos turísticos, PIB per capita e 
+//o _inverso_ da densidade populacional – quanto menor a densidade, maior o "poder"). 
+
+
   // Área para exibição dos dados da cidade da carta 2
 
 printf ("Olá, jogador! Segue os dados da sua carta numero 2\n");
@@ -108,6 +119,9 @@ printf ("Densidade: %.2f\n", densidade_populacional_carta2);
 
 pib_per_capita_carta2 = pib2 / populacao2;
 printf ("Pib per capita: %.2f\n", pib_per_capita_carta2);
+
+super_poder_carta_2 = (float) (populacao2 + area_em_km2_carta2 + pib2 + pontos_turisticos_carta2 + pib_per_capita_carta2
++ (1.0 / densidade_populacional_carta2));
 
 return 0;
 } 
